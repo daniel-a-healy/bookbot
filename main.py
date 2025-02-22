@@ -41,7 +41,7 @@ def main():
     char_count_list.sort(reverse=True, key=sort_on)
 
     for entry in char_count_list:
-        print(f"The '{entry["character"]}' character was found {entry["count"]} times")
+        print(f"'{entry["character"]}: {entry["count"]}'")
 
 
 
