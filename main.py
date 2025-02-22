@@ -1,3 +1,4 @@
+import sys
 from stats import get_word_count
 
 def get_char_count(file):
@@ -15,7 +16,12 @@ def sort_on(dict):
     return dict["count"]
 
 def main():
-    path_to_file = "books/frankenstein.txt"
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    print(sys.argv)
+    path_to_file = sys.argv[1]
     with open(path_to_file) as f:
         file_contents = f.read()
     
