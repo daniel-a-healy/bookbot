@@ -1,6 +1,4 @@
-def get_word_count(file):
-    split_file = file.split()
-    return len(split_file)
+from stats import get_word_count
 
 def get_char_count(file):
     char_count_dict = {}
